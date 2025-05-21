@@ -10,10 +10,6 @@ This project provides a web-based system for recognizing actions in sports video
 - Memory management to prevent GPU and disk space leaks.
 - Logging for debugging and monitoring.
 
-## Project Structure
-
-action_recognition/├── app.py # Flask frontend for web interface├── api.py # FastAPI backend for video processing├── templates/│ └── index.html # HTML template for frontend├── static/│ ├── css/│ │ └── style.css # CSS for styling│ └── uploads/ # Temporary storage for uploaded videos├── temp_uploads/ # Temporary storage for FastAPI video processing├── requirements.txt # Python dependencies└── README.md # This file
-
 ## Prerequisites
 
 - Python 3.8 or higher
