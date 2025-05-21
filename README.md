@@ -61,7 +61,7 @@ Open http://127.0.0.1:5000 in your browser.
 Upload a sports video (MP4 recommended, AVI supported) to analyze actions.
 View the recognized actions (e.g., "shooting," "passing," "dribbling") and the uploaded video.
 
-Usage
+# Usage
 
 Uploading a Video:
 
@@ -85,7 +85,7 @@ Key: `video`, Value: Select your video file.
 
 Check the JSON response for actions.
 
-Troubleshooting
+# Troubleshooting
 
 Video Not Displaying:
 
@@ -108,27 +108,29 @@ Cause: Video is too short (<64 frames, ~2 seconds at 30 fps).
 Fix:
 Use a longer video or reduce clip_length in api.py:clips = extract_clips(video_path, clip_length=32, step=16)
 
-Verify video readability:cap = cv2.VideoCapture("test_video.mp4")
+Verify video readability:
+
+```python
+cap = cv2.VideoCapture("test_video.mp4")
 print(cap.isOpened()) # Should print True
 cap.release()
+```
 
-Memory Issues:
+## Memory Issues:
 
 Monitor GPU memory with nvidia-smi.
 Check disk space in static/uploads and temp_uploads.
 The code includes memory cleanup (tf.keras.backend.clear_session(), gc.collect(), file deletion).
 
-Notes
+# Notes
 
 Model: The LSTM model must be trained or loaded with weights for accurate predictions. Update ACTION_LABELS to match your dataset.
 Video Format: MP4 with H.264 is recommended for browser compatibility. Convert AVI files using FFmpeg.
 Performance: For large videos, reduce clip_length or optimize preprocessing.
 Production: Use Gunicorn for Flask (gunicorn -w 4 app:app -b 0.0.0.0:5000) and Uvicorn workers for FastAPI. Consider a reverse proxy (e.g., Nginx).
 
-License
-MIT License. See LICENSE for details.
+# Acknowledgments
 
-Acknowledgments
 UCF101 Dataset for sample videos.
 TensorFlow Hub for the I3D model.
 FastAPI and Flask for backend and frontend frameworks.
