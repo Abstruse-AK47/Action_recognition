@@ -1,9 +1,0 @@
-# Folders
-
-__pycache__/
-static/uploads
-.git/
-
-# Files
-.pylintrc
-.gitignore
