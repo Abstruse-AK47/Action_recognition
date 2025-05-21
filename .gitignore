@@ -1,0 +1,11 @@
+# Folders
+
+__pycache__/
+static/upload
+.git/
+
+# Files
+.env
+.pylintrc
+pyrightconfig.json
+
