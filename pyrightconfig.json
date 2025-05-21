@@ -1,8 +1,0 @@
-{
-  "venvPath": "/home/madara/miniforge3/envs/",
-  "venv": "tf_gpu",
-  "pythonPath": "/home/madara/miniforge3/envs/tf_gpu/lib/python3.8",
-  "reportMissingImports": false,
-  "pythonVersion": "3.8",
-  "typeCheckingMode": "basic"
-}
