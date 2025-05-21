@@ -138,6 +138,6 @@ cap.release()
 
 # Acknowledgments
 
-UCF101 Dataset for sample videos.
-TensorFlow Hub for the I3D model.
-FastAPI and Flask for backend and frontend frameworks.
+- UCF101 Dataset for sample videos.
+- TensorFlow Hub for the I3D model.
+- FastAPI and Flask for backend and frontend frameworks.
